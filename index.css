@@ -1,0 +1,85 @@
+*{
+    margin:0px;
+    border: 0px; 
+    padding: 0px;
+}
+
+.navbar{
+    height:55px;   
+    background-color:#3c7168;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    box-shadow: -1px 4px 13px -3px black;    
+}
+
+#mainnav{
+    flex-grow: 1;
+    margin-left: 5px;
+}
+#titlelogo{
+    flex-grow: 1;
+}
+#extra{
+    flex-grow: 50;
+}
+.loging{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-end;
+    padding: 10px 19px 9px 15px;
+}
+.loging li{
+    margin: 0px 10px;
+    padding: 2px 5px;
+    color:#4faa84;    
+} 
+.loging li:hover~.toolrighticon{   
+        fill:#d3ede8;    
+}
+.tollright {
+    height: 23.5px;
+    width: 23.5px; 
+}
+.btn {
+    background-color:#3c7168;
+    padding: 2px 2px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 50%;
+  }
+.toolrighticon{
+   
+    fill:#4faa84;
+}
+
+
+.menubar{
+    background-color: #3c7168;
+    width:fit-content;
+    border-top: 1px solid #d3ede8;
+    padding: 2px;
+    box-shadow: 4px 1px 13px -3px black;
+    height:500px;
+    display: block;
+    
+}
+.rightbar{
+    list-style:none ;
+    border-radius: 2%;
+    display:flex;
+    flex-flow: column nowrap;
+    width:fit-content;
+    
+}
+.rightbar li{
+    padding: 10px 10px 5px;
+}
+   
+.cards{
+    display:block;
+    border:1px solid;
+    margin: 20px;
+}
