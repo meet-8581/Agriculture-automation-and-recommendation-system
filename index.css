@@ -7,7 +7,7 @@
 
 .navbar{
     height:7vh;   
-    background-color:#cff4d2;
+    background-color:#205072;
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -26,7 +26,7 @@
 }
 .span1{
     font-size: 2.5em;
-    color: #205072;
+    color: #cff4d2;
     text-align: center;
 }
 #extra{
@@ -49,8 +49,18 @@
     height: 23.5px;
     width: 23.5px; 
 }
+
+.tollright:hover {
+    height: 29.5px;
+    width: 29.5px; 
+} 
+.btn:hover {
+    height: 35.5px;
+    width: 35.5px; 
+}
+
 .btn {
-    background-color: #cff4d2;
+    background-color: #205072;
     padding: 2px 2px;
     cursor: pointer;
     display: inline-block;
@@ -58,7 +68,7 @@
   }
 .toolrighticon{
    
-    fill:#2d6c7c;
+    fill:#7dc495;
 }
 
 .content{
@@ -67,8 +77,8 @@
 }
 
 .menubar{
-    background-color: #cff4d2;
-    width:fit-content;
+    background-color: #205072;
+    width:fit;
     display: inline-block;
     padding: 2px;
     box-shadow: 2px 4px 13px -11px black; 
@@ -80,7 +90,6 @@
     display:flex;
     flex-flow: column nowrap;
     align-items: center;
-    width:fit-content;
     
     
 }
