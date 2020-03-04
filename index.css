@@ -3,10 +3,14 @@
     border: 0px; 
     padding: 0px;
     font-family: monospace;
+    
+}
+html{
+    background-color: #dedede25;
 }
 
 .navbar{
-    height:7vh;   
+    height:7.5vh;   
     background-color:#205072;
     display: flex;
     flex-flow: row;
@@ -16,7 +20,7 @@
 
 #mainnav{
     flex-grow: 1;
-    margin-left: 15px;
+    margin: 12.5px 0px 9px 19px;
 }
 #titlelogo{
     flex-grow: 1;
@@ -25,9 +29,10 @@
     width:50px;
 }
 .span1{
-    font-size: 2.5em;
-    color: #cff4d2;
+    font-size: 2.75em;
+    color: #7dc495;
     text-align: center;
+    letter-spacing: 2.5px;
 }
 #extra{
     flex-grow: 50;
@@ -51,12 +56,10 @@
 }
 
 .tollright:hover {
-    height: 29.5px;
-    width: 29.5px; 
+    transform: scale(1.1); 
 } 
 .btn:hover {
-    height: 35.5px;
-    width: 35.5px; 
+    transform: scale(1.1);
 }
 
 .btn {
@@ -65,7 +68,7 @@
     cursor: pointer;
     display: inline-block;
     border-radius: 50%;
-  }
+}
 .toolrighticon{
    
     fill:#7dc495;
@@ -78,7 +81,7 @@
 
 .menubar{
     background-color: #205072;
-    width:fit;
+    width:4.25vw;
     display: inline-block;
     padding: 2px;
     box-shadow: 2px 4px 13px -11px black; 
@@ -112,18 +115,23 @@
     height:40vh;
     width:35vw;
     margin: 10px;
-    background-color: #cff4d2;
-    box-shadow: 0 0 20px -9px black;
-    border-radius: 5%;
+    background-color: #ddd;
+    border:1px solid #ddd;
+    border-radius: 1.5%;
     position: relative;
 
 }
+.cards:hover{
+    box-shadow: 0 0 20px -16px black;
+    transform: scale(1.009);
+}
 .cards:nth-child(1){
     width:85vw;
-    border-radius: 4%;
+    border-radius: 1.5%;
 }
 .cards:nth-child(2n-1){
     margin-right: 20px;
+    
 }
 
 .cards:nth-child(2n){
