@@ -63,8 +63,7 @@
 
 .content{
     display:flex;
-    height:80vh;
-    border:1px solid black;
+    height:fit-content;
 }
 
 .menubar{
@@ -73,7 +72,7 @@
     display: inline-block;
     padding: 2px;
     box-shadow: 2px 4px 13px -11px black; 
-    height:80vh;
+    height:unset;
     
 }
 .rightbar{
@@ -90,7 +89,6 @@
 }
 
 .cardpatale{
-    border:1px solid black;
     display:flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -98,14 +96,35 @@
     padding: 5px;
     margin: 10px;
     width: fit-content;
-    height: 75vh;
+    height: fit-content;
 }
 
 .cards{
-    border: 1px solid black;
-    height:30vh;
-    width:30vw;
+    height:40vh;
+    width:35vw;
     margin: 10px;
     background-color: #cff4d2;
+    box-shadow: 0 0 20px -9px black;
+    border-radius: 5%;
+    position: relative;
 
+}
+.cards:nth-child(1){
+    width:85vw;
+    border-radius: 4%;
+}
+.cards:nth-child(2n-1){
+    margin-right: 20px;
+}
+
+.cards:nth-child(2n){
+    margin-left: 20px;
+}
+.cards img{
+    height:80%;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
