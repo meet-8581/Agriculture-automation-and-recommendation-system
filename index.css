@@ -2,15 +2,16 @@
     margin:0px;
     border: 0px; 
     padding: 0px;
+    font-family: monospace;
 }
 
 .navbar{
-    height:55px;   
-    background-color:#3c7168;
+    height:7vh;   
+    background-color:#cff4d2;
     display: flex;
     flex-flow: row;
     align-items: center;
-    box-shadow: -1px 4px 13px -3px black;    
+    box-shadow: 2px 4px 13px -11px black;    
 }
 
 #mainnav{
@@ -19,6 +20,14 @@
 }
 #titlelogo{
     flex-grow: 1;
+}
+#titlelogo img{
+    width:50px;
+}
+.span1{
+    font-size: 2.5em;
+    color: #205072;
+    text-align: center;
 }
 #extra{
     flex-grow: 50;
@@ -34,17 +43,14 @@
 .loging li{
     margin: 0px 10px;
     padding: 2px 5px;
-    color:#4faa84;    
 } 
-.loging li:hover~.toolrighticon{   
-        fill:#d3ede8;    
-}
+
 .tollright {
     height: 23.5px;
     width: 23.5px; 
 }
 .btn {
-    background-color:#3c7168;
+    background-color: #cff4d2;
     padding: 2px 2px;
     cursor: pointer;
     display: inline-block;
@@ -52,34 +58,54 @@
   }
 .toolrighticon{
    
-    fill:#4faa84;
+    fill:#2d6c7c;
 }
 
+.content{
+    display:flex;
+    height:80vh;
+    border:1px solid black;
+}
 
 .menubar{
-    background-color: #3c7168;
+    background-color: #cff4d2;
     width:fit-content;
-    border-top: 1px solid #d3ede8;
+    display: inline-block;
     padding: 2px;
-    box-shadow: 4px 1px 13px -3px black;
-    height:500px;
-    display: block;
+    box-shadow: 2px 4px 13px -11px black; 
+    height:80vh;
     
 }
 .rightbar{
     list-style:none ;
-    border-radius: 2%;
     display:flex;
     flex-flow: column nowrap;
+    align-items: center;
     width:fit-content;
+    
     
 }
 .rightbar li{
     padding: 10px 10px 5px;
 }
-   
+
+.cardpatale{
+    border:1px solid black;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+    width: fit-content;
+    height: 75vh;
+}
+
 .cards{
-    display:block;
-    border:1px solid;
-    margin: 20px;
+    border: 1px solid black;
+    height:30vh;
+    width:30vw;
+    margin: 10px;
+    background-color: #cff4d2;
+
 }
