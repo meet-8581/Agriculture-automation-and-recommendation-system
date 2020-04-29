@@ -13,12 +13,48 @@
     <link rel="icon" href="img&svg\Agri.png">
 
 
+    
+
+
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Grouped Bar Chart</title>
+
+        <link href="data.css" rel="stylesheet" />
+
+        
+        </style>
+
+        <script>
+        window.Promise ||
+            document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+            )
+        window.Promise ||
+            document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+            )
+        window.Promise ||
+            document.write(
+            '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+            )
+        </script>
+
+        
+        <script src="apexcharts.js"></script>
+
+
+
+
+
+
+
 </head>
 <body>
     <div class="navbar">
         
         <div id="titlelogo">
-            <img  src="Agri.png">
+            <img  src="img&svg\Agri.png">
         </div>
         <div>
             <span class="span1">AgriSense</span>
@@ -46,41 +82,121 @@
     
    
         <div class="cardpatale">
-            <div class="cards"><h2>Current Data</h2><svg viewBox="0 0 500 100" class="chart">
-  
-                <polyline
-                   fill="none"
-                   stroke="#0074d9"
-                   stroke-width="2"
-                   points="
-                     00,120
-                     20,60
-                     40,80
-                     60,20
-                     80,80
-                     100,80
-                     120,60
-                     140,100
-                     160,90
-                     180,80
-                     200, 110
-                     220, 10
-                     240, 70
-                     260, 100
-                     280, 100
-                     300, 40
-                     320, 10
-                     340, 90
-                     360, 80
-                     380, 100
-                     400, 60
-                     420, 70
-                     440, 80
-                   "
-                 />
+            <div class="cards"><h2>Current Data</h2>
+                <div id="chart"></div>
+
+                <script>
                 
-              </svg></div>
-            <div class="cards"><h2>Moisture</h2></div>
+                    var options = {
+                    series: [{
+                    name: 'Likes',
+                    data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5]
+                    }],
+                    chart: {
+                    height: 350,
+                    type: 'line',
+                    },
+                    stroke: {
+                    width: 7,
+                    curve: 'smooth'
+                    },
+                    xaxis: {
+                    type: 'datetime',
+                    categories: ['1/11/2000', '2/11/2000', '3/11/2000', '4/11/2000', '5/11/2000', '6/11/2000', '7/11/2000', '8/11/2000', '9/11/2000', '10/11/2000', '11/11/2000', '12/11/2000', '1/11/2001', '2/11/2001', '3/11/2001','4/11/2001' ,'5/11/2001' ,'6/11/2001'],
+                    },
+                    title: {
+                    text: '',
+                    align: 'left',
+                    style: {
+                        fontSize: "16px",
+                        color: '#666'
+                    }
+                    },
+                    fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shade: 'dark',
+                        gradientToColors: [ '#FDD835'],
+                        shadeIntensity: 1,
+                        type: 'horizontal',
+                        opacityFrom: 1,
+                        opacityTo: 1,
+                        stops: [0, 100, 100, 100]
+                    },
+                    },
+                    markers: {
+                    size: 4,
+                    colors: ["#FFA41B"],
+                    strokeColors: "#fff",
+                    strokeWidth: 2,
+                    hover: {
+                        size: 7,
+                    }
+                    },
+                    yaxis: {
+                    min: -10,
+                    max: 40,
+                    title: {
+                        text: 'Overall plant health',
+                    },
+                    }
+                    };
+
+                    var chart = new ApexCharts(document.querySelector("#chart"), options);
+                    chart.render();
+                
+                
+                </script>  
+               
+
+            </div>
+            <div class="cards"><h3>moisture</h3>
+                <div id="chart"></div>
+
+                <!script>
+                  
+                    var options = {
+                      series: [{
+                      data: [53, 55, 41, 64, 59, 50, 32]
+                    }, {
+                      data: [44, 32, 33, 52, 43, 44, 21]
+                    }],
+                      chart: {
+                      type: 'bar',
+                      height: 430
+                    },
+                    plotOptions: {
+                      bar: {
+                        horizontal: true,
+                        dataLabels: {
+                          position: 'top',
+                        },
+                      }
+                    },
+                    dataLabels: {
+                      enabled: true,
+                      offsetX: -6,
+                      style: {
+                        fontSize: '12px',
+                        colors: ['#fff']
+                      }
+                    },
+                    stroke: {
+                      show: true,
+                      width: 1,
+                      colors: ['#fff']
+                    },
+                    xaxis: {
+                      categories: [11, 12, 13, 14, 15, 16, 17],
+                    },
+                    };
+            
+                    var chart = new ApexCharts(document.querySelector("#chart"), options);
+                    chart.render();
+                  
+                  
+                </script>
+            </div>
             <div class="cards"><h2>Weather</h2><!img src=""></div>
             <div class="cards">Acidity</div>
             <div class="cards">NPK</div>
