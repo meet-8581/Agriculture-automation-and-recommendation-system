@@ -4,9 +4,11 @@
     padding: 0px;
     font-family: monospace;
     
+   
 }
 html{
-    background-color: #dedede25;
+   /* background-color: #dedede25;*/
+    background-color: #e9ecef;
 }
 
 .navbar{
@@ -63,7 +65,7 @@ html{
 }
 
 .btn {
-    /* background-color: #205072; */
+    
     background-color:#fff;
     padding: 2px 2px;
     cursor: pointer;
@@ -71,8 +73,6 @@ html{
     border-radius: 50%;
 }
 .toolrighticon{
-   
-    /* fill:#7dc495;*/
     fill:#205072;
 } 
 
@@ -82,7 +82,6 @@ html{
 }
 
 .menubar{
-    /* background-color: #205072; */
     background-color:#fff;
     width:4.25vw;
     display: inline-block;
@@ -112,13 +111,14 @@ html{
     margin: 10px;
     width: fit-content;
     height: fit-content;
+   
 }
 
 .cards{
-    height:40vh;
+    height:60vh;
     width:35vw;
     margin: 10px;
-    background-color: #dddddd0f;
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 6px;
     position: relative;
@@ -141,25 +141,14 @@ html{
     margin-left: 20px;
 }
 
-.chart {
-    width: inherit;
-    height: 250px;
-    border-left: 1px dotted #555;
-    border-bottom: 1px dotted #555;
-    padding: 20px 20px 20px 20px;
-    margin: 12px 30px; 
+#datagraph {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    padding: 0px 0px 31px 0px;
   }
 
-/*.cards img{
-    height:95%;
-    width: 95%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#moisturebar{
 
-}*/
-
-
-
-/* comment */
+    width:inherit;
+    height:inherit;
+}
