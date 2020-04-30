@@ -2800,7 +2800,7 @@
   		"Fri",
   		"Sat"
   	],
-  	toolbar: {
+  /*	toolbar: {
   		exportToSVG: "Download SVG",
   		exportToPNG: "Download PNG",
   		exportToCSV: "Download CSV",
@@ -2811,8 +2811,8 @@
   		zoomOut: "Zoom Out",
   		pan: "Panning",
   		reset: "Reset Zoom"
-  	}
-  };
+  	}  */
+    };
   var en = {
   	name: name,
   	options: options
@@ -5917,7 +5917,7 @@
         var noDataOpts = w.config.noData;
         var graphics = new Graphics(me.ctx);
         var x = w.globals.svgWidth / 2;
-        var y = w.globals.svgHeight / 2;
+        var y = 500; //w.globals.svgHeight / 2;
         var textAnchor = 'middle';
         w.globals.noData = true;
         w.globals.animationEnded = true;
@@ -13870,8 +13870,8 @@
         var elForeign = gl.dom.elLegendForeign;
         elForeign.setAttribute('x', 0);
         elForeign.setAttribute('y', 0);
-        elForeign.setAttribute('width', gl.svgWidth);
-        elForeign.setAttribute('height', gl.svgHeight);
+        //elForeign.setAttribute('width', gl.svgWidth);
+        //elForeign.setAttribute('height', gl.svgHeight);
         gl.dom.elLegendWrap.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
         elForeign.appendChild(gl.dom.elLegendWrap);
         elForeign.appendChild(this.getLegendStyles());
