@@ -3,11 +3,10 @@
 
 #chart, .chart-box {
     background: #fff;
-    box-shadow: 0 22px 35px -16px rgba(0,0,0, 0.1);
+    
 }
 
 #chart{
-
     width:-webkit-fill-available;
     height:-webkit-fill-available;
     /*max-width: 650px;*/
