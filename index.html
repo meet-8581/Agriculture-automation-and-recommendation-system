@@ -43,6 +43,17 @@
         
         <script src="apexcharts.js"></script>
 
+        <script src="irregular-data-series.js"></script>
+                <script>
+                var ts2 = 1484418600000;
+                var dates = [];
+                var spikes = [5, -5, 3, -3, 8, -8]
+                for (var i = 0; i < 120; i++) {
+                    ts2 = ts2 + 86400000;
+                    var innerArr = [ts2, dataSeries[1][i].value];
+                    dates.push(innerArr)
+                }
+                </script>
 
 
 
@@ -83,7 +94,7 @@
    
         <div class="cardpatale">
             <div class="cards"><h2>Current Data</h2>
-                <div id="chart"></div>
+                <div id="chart1"></div>
 
                 <script>
                 
@@ -93,7 +104,7 @@
                     data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5]
                     }],
                     chart: {
-                    height: 350,
+                    height: 450,
                     type: 'line',
                     },
                     stroke: {
@@ -142,7 +153,7 @@
                     }
                     };
 
-                    var chart = new ApexCharts(document.querySelector("#chart"), options);
+                    var chart = new ApexCharts(document.querySelector("#chart1"), options);
                     chart.render();
                 
                 
@@ -151,9 +162,9 @@
 
             </div>
             <div class="cards"><h3>moisture</h3>
-               <!-- <div id="chart"></div>
+                <div id="chart2"></div>
 
-                <script>
+                 <script>
                   
                     var options = {
                       series: [{
@@ -163,7 +174,8 @@
                     }],
                       chart: {
                       type: 'bar',
-                      height: 430
+                      height: 475
+                      
                     },
                     plotOptions: {
                       bar: {
@@ -191,17 +203,185 @@
                     },
                     };
             
-                    var chart = new ApexCharts(document.querySelector("#chart"), options);
+                    var chart = new ApexCharts(document.querySelector("#chart2"), options);
                     chart.render();
                   
                   
-                </script> -->
+                </script> 
+            </div>    
+            
+            <div class="cards"><h3>Weather</h3>
+            
+                <!----> <div id="chart3"></div>
+
+                <script>
+                  
+                    var options = {
+                      series: [{
+                      name: 'Day',
+                      data: [31, 40, 28, 51, 42, 35, 44]
+                    }, {
+                      name: 'Night',
+                      data: [25, 32, 26, 32, 34, 30, 36]
+                    }],
+                      chart: {
+                      height: 450,
+                      type: 'area'
+                    },
+                    dataLabels: {
+                      enabled: false
+                    },
+                    stroke: {
+                      curve: 'smooth'
+                    },
+                    xaxis: {
+                      type: 'datetime',
+                      categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                    },
+                    tooltip: {
+                      x: {
+                        format: 'dd/MM/yy HH:mm'
+                      },
+                    },
+                    };
+            
+                    var chart = new ApexCharts(document.querySelector("#chart3"), options);
+                    chart.render();
+                  
+                  
+                </script> 
+            
             </div>
-            <div class="cards"><h2>Weather</h2><!img src=""></div>
-            <div class="cards">Acidity</div>
-            <div class="cards">NPK</div>
-            <div class="cards">cards</div>
-            <div class="cards">cards</div>
+            <div class="cards"><h3>Soil composition</h3>
+            
+                <div style="margin-top: 50px;"id="chart4"></div>
+
+                <script>
+                
+                    var options = {
+                    series: [{
+                    name: 'Series 1',
+                    data: [80, 50, 30, 40, 100, 20],
+                    }, {
+                    name: 'Series 2',
+                    data: [20, 30, 40, 80, 20, 80],
+                    }, {
+                    name: 'Series 3',
+                    data: [44, 76, 78, 13, 43, 10],
+                    }],
+                    chart: {
+                    height: 450,
+                    type: 'radar',
+                    dropShadow: {
+                        enabled: true,
+                        blur: 1,
+                        left: 1,
+                        top: 1
+                    }
+                    },
+                    title: {
+                    text: ''
+                    },
+                    stroke: {
+                    width: 2
+                    },
+                    fill: {
+                    opacity: 0.1
+                    },
+                    markers: {
+                    size: 0
+                    },
+                    xaxis: {
+                    categories: ['PH', 'Temprature', 'Slinity', 'Fertillity', 'Moisturre']
+                    }
+                    };
+
+                    var chart = new ApexCharts(document.querySelector("#chart4"), options);
+                    chart.render();
+                
+                
+                </script>
+            
+            </div>
+            <div class="cards"><h3>Crop Price Movement</h3>
+            
+                <div id="chart5"></div>
+
+                <script>
+                
+                    var options = {
+                    series: [{
+                    name: 'XYZ MOTORS',
+                    data: dates
+                    }],
+                    chart: {
+                    type: 'area',
+                    stacked: false,
+                    height: 450,
+                    zoom: {
+                        type: 'x',
+                        enabled: true,
+                        autoScaleYaxis: true
+                    },
+                    toolbar: {
+                        autoSelected: 'zoom'
+                    }
+                    },
+                    dataLabels: {
+                    enabled: false
+                    },
+                    markers: {
+                    size: 0,
+                    },
+                    title: {
+                    text: '',
+                    align: 'left'
+                    },
+                    fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shadeIntensity: 1,
+                        inverseColors: false,
+                        opacityFrom: 0.5,
+                        opacityTo: 0,
+                        stops: [0, 90, 100]
+                    },
+                    },
+                    yaxis: {
+                    labels: {
+                        formatter: function (val) {
+                        return (val / 1000000).toFixed(0);
+                        },
+                    },
+                    title: {
+                        text: 'Price'
+                    },
+                    },
+                    xaxis: {
+                    type: 'datetime',
+                    },
+                    tooltip: {
+                    shared: false,
+                    y: {
+                        formatter: function (val) {
+                        return (val / 1000000).toFixed(0)
+                        }
+                    }
+                    }
+                    };
+
+                    var chart = new ApexCharts(document.querySelector("#chart5"), options);
+                    chart.render();
+                
+                
+                </script>
+            
+            
+            
+            
+            
+            
+            </div>
         </div>
     
 </div>
